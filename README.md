@@ -28,7 +28,7 @@ Just run the `initiate_chat.py` to converse with Lydya
 ### Demo of the AI learning:
 <hr/>
 
-<img align="center" alt="GIF" src="https://raw.githubusercontent.com/PraveenKumarSridhar/basic_chatbot/main/assets/sample.jng" width="500" height="300" />
+<img align="center" alt="png" src="https://raw.githubusercontent.com/PraveenKumarSridhar/basic_chatbot/main/assets/sample.png"  />
 
 ### References:
 <hr/>
