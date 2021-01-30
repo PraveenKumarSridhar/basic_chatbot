@@ -1,0 +1,2 @@
+model_checkpoint_path: "/home/praveenkumar/Documents/CODE/github_repos/basic_chatbot/basic_chatbot/src/model/v1/chabot_v1.tflearn"
+all_model_checkpoint_paths: "/home/praveenkumar/Documents/CODE/github_repos/basic_chatbot/basic_chatbot/src/model/v1/chabot_v1.tflearn"
