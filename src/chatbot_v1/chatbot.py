@@ -32,28 +32,21 @@ model = tflearn.DNN(net)
 
 # * load trained model wts
 model.load('model/v1/chabot_v1.tflearn')
-
-# * text colors
-class txtcolor:
-    YOU = '\033[94m'
-    LYDYA_SUCCESS = '\033[92m'
-    LYDYA_FAIL = '\033[91m'
-    
-    
+        
 def chat():
-    print("start talking with the bot!")
-    while True:
-        inp = input(f"{txtcolor.YOU}you: ")
-        results = model.predict([get_bow(inp,vocab)])
-        results_index = np.argmax(results)
-        results_proba = np.max(results)
-        if results_proba < THRESHOLD:
-            print(f'{txtcolor.LYDYA_FAIL}'+str(random.choice(FAILURE_RESP)))
-        else:
-            tag = labels[results_index]
-            for intent in intents['intents']:
-                if tag == "goodbye" and tag == intent['tag']:
-                    print(f"{txtcolor.LYDYA_SUCCESS}Lydya: "+ str(random.choice(intent['responses'])))
-                    return None
-                elif tag == intent['tag']:
-                    print(f"{txtcolor.LYDYA_SUCCESS}Lydya: "+ str(random.choice(intent['responses'])))            
+    inp = input(f"{txtcolor.YOU}you: ")
+    results = model.predict([get_bow(inp,vocab)])
+    results_index = np.argmax(results)
+    results_proba = np.max(results)
+    if results_proba < THRESHOLD:
+        print(f'{txtcolor.LYDYA_FAIL}'+str(random.choice(FAILURE_RESP)))
+        return True
+    else:
+        tag = labels[results_index]
+        for intent in intents['intents']:
+            if tag == "goodbye" and tag == intent['tag']:
+                print(f"{txtcolor.LYDYA_SUCCESS}Lydya: "+ str(random.choice(intent['responses'])))
+                return False
+            elif tag == intent['tag']:
+                print(f"{txtcolor.LYDYA_SUCCESS}Lydya: "+ str(random.choice(intent['responses'])))
+                return True            
