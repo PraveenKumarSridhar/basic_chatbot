@@ -1,4 +1,4 @@
-# BASIC CHAT BOT
+# LYDYA: BASIC CHAT BOT
 
 [![GitHub issues](https://img.shields.io/github/issues/PraveenKumarSridhar/basic_chatbot?style=for-the-badge)](https://github.com/PraveenKumarSridhar/basic_chatbot/issues)
 [![GitHub forks](https://img.shields.io/github/forks/PraveenKumarSridhar/basic_chatbot?style=for-the-badge)](https://github.com/PraveenKumarSridhar/basic_chatbot/network)
