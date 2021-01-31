@@ -1,3 +1,7 @@
 src/.vscode/settings.json
 
 .vscode/
+
+src/chatbot_v1/__pycache__/
+
+*.pyc
