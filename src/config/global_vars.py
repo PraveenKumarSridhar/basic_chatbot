@@ -3,7 +3,9 @@ THRESHOLD = 0.80
 FAILURE_RESP = ["Lydya: I'm sorry I don't quiet understand what you mean.",\
     "Lydya: I'm sorry I'm not sure understand what you mean.","Lydya: Im sorry I didn't get that."]
 
-VERSION = '1.0.0'
+VERSION = '1.5.0'
+TOKENIZERS = 'tokenizer/'
+
 
 # * text colors
 class txtcolor:
@@ -12,3 +14,4 @@ class txtcolor:
     LYDYA_SUCCESS = '\033[92m'
     LYDYA_FAIL = '\033[91m'
     ENDC = '\033[0m'
+    
