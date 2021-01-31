@@ -26,6 +26,7 @@ from tensorflow.keras.models import load_model
 from tensorflow.keras import regularizers
 
 from config.global_vars import *
+from utils.v2_utils import *
 
 # * Read intents file
 with open('config/intents.json') as f:
@@ -64,5 +65,9 @@ def chat():
                 print(f"{txtcolor.LYDYA_SUCCESS}Lydya: "+ str(random.choice(intent['responses'])))
                 return False
             elif tag == intent['tag']:
-                print(f"{txtcolor.LYDYA_SUCCESS}Lydya: "+ str(random.choice(intent['responses'])))
+                if intent['method'] != '':
+                    output = '\n' + str(eval(intent['method'])())
+                else:
+                    output = random.choice(intent['responses'])
+                print(f"{txtcolor.LYDYA_SUCCESS}Lydya: "+ str(output))
                 return True            
