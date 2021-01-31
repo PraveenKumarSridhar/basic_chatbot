@@ -2,27 +2,42 @@
         {"tag": "greeting",
          "patterns": ["Hi", "How are you", "Is anyone there?", "Hello", "Good day", "Whats up"],
          "responses": ["Hello!", "Good to see you again!", "Hi there, how can I help?"],
-         "context_set": ""
+         "method": ""
         },
         {"tag": "goodbye",
          "patterns": ["cya", "See you later", "Goodbye", "I am Leaving", "Have a Good day","bye","quit"],
          "responses": ["Sad to see you go :(", "Talk to you later", "Goodbye!"],
-         "context_set": ""
+         "method": ""
+        },
+        {"tag": "thanks",
+         "patterns": ["thanks", "thank you"],
+         "responses": ["Welcome", "You're welcome"],
+         "method": ""
         },
         {"tag": "age",
          "patterns": ["how old", "how old is Lydya", "what is your age", "how old are you", "age?"],
          "responses": ["I am 24 years old!", "24 years young!"],
-         "context_set": ""
+         "method": ""
         },
         {"tag": "name",
          "patterns": ["what is your name", "what should I call you", "whats your name?","who are you?","who am i talking to?","who is this?"],
          "responses": ["You can call me Lydya.", "I'm Lydya!", "I'm Lydya: a simple todo bot!!!"],
-         "context_set": ""
+         "method": ""
         },
         {"tag": "functionality",
-        "patterns": ["what can you do", "how can you help", "what is your command list","list operations"],
-        "responses": ["I am a todo bot!!! \n I can help you organize your day by setting reminders for you."],
-        "context_set": ""
+        "patterns": ["what can you do","ops", "how can you help", "what is your command list","list operations","operations"],
+        "responses": ["I can help you with the following. \n 1) Fetch news.. \n 2) Get word meaning."],
+        "method": ""
+        },
+        {"tag": "get_news",
+        "patterns": ["what is the news", "whats happening now", "what is trending now","news","whats the top news","fetch news","get news"],
+        "responses": [""],
+        "method": "get_news"
+        },
+        {"tag": "get_definition",
+        "patterns": ["dictionary", "help me get definition", "dict","define","word meaning"],
+        "responses": [""],
+        "method": "define_word"
         }
    ]
 }
